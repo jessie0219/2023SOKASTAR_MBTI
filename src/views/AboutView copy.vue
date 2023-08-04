@@ -2,10 +2,6 @@
 <div class="text-center">
     <div>你的16型人格是：<input type="text" v-model="personalityType" @input="checkFamily" /></div>
       <div class="mt-2">恭喜你!!你是{{ familyName }}家族</div>
-      <div v-if="showImage" class="mt-2">
-      <img :src="imageURL" alt="16型人格" class="image" />
-    </div>
-      <!-- <div><img src="../assets/MBTI/ENFJ.png" alt=""></div> -->
 </div>
 </template>
 
@@ -15,7 +11,6 @@ export default {
     return {
       personalityType: "",
       familyName: "",
-      imageURL: "",
     };
   },
   methods: {
@@ -41,18 +36,6 @@ export default {
 
       const inputType = this.personalityType.trim().toLowerCase().toUpperCase();
       this.familyName = personalityToFamilyMap[inputType] || "...";
-
-
-      this.imageURL = this.getImageURL(inputType);
-    },
-    getImageURL(personalityType) {
-      return `../src/assets/MBTI/${personalityType.trim().toLowerCase().toUpperCase()}.png`;
-      // return require(`../assets/MBTI/${personalityType.trim().toLowerCase().toUpperCase()}.png`);
-    },
-  },
-  computed: {
-    showImage() {
-      return this.personalityType.trim() !== "";
     },
   },
 };
@@ -68,12 +51,5 @@ export default {
 
 input[type="text"] {
   width: 150px;
-}
-
-
-.image {
-  width: 150px;
-  height: auto;
-  margin: 10px;
 }
 </style>
