@@ -5,7 +5,6 @@
       <div v-if="showImage" class="mt-2">
       <img :src="imageURL" alt="16型人格" class="image" />
     </div>
-      <!-- <div><img src="../assets/MBTI/ENFJ.png" alt=""></div> -->
 </div>
 </template>
 
