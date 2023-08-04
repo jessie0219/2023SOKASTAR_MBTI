@@ -12,8 +12,8 @@ import HelloWorld from './components/HelloWorld.vue'
       <HelloWorld msg="2023國中歡樂成長營" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">16型人格轉換器</RouterLink>
+        <!-- <RouterLink to="/">Home</RouterLink> -->
+        <!-- <RouterLink to="/about">16型人格轉換器</RouterLink> -->
       </nav>
     </div>
   </header>
@@ -24,7 +24,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
 </template>
 
-<style scoped>
+<style>
 header {
   line-height: 1.5;
   max-height: 100vh;

@@ -10,6 +10,7 @@
 
 a,
 .green {
+  font-size: 0.6rem;
   text-decoration: none;
   color: rgb(0, 151, 189);
   transition: 0.4s;
